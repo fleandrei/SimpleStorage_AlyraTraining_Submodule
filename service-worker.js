@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/[fleandrei].github.io/[SimpleStorage_AlyraTraining_Submodule]/precache-manifest.a9c267bbb6b741122c1d9270784efd06.js"
+  "/SimpleStorage_AlyraTraining_Submodule/precache-manifest.29d793d69c0948ee1ec2d91bec216a88.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/[fleandrei].github.io/[SimpleStorage_AlyraTraining_Submodule]/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/SimpleStorage_AlyraTraining_Submodule/index.html"), {
   
   blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
 });
