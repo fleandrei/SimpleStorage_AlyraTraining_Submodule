@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://simplestorageheroku.herokuapp.com/",
+  "homepage": "https://fleandrei.github.io/SimpleStorage_AlyraTraining_Submodule/",
   "dependencies": {
     "gh-pages": "^3.1.0",
     "react": "16.11.0",
