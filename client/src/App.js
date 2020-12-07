@@ -38,6 +38,7 @@ class App extends Component {
   runExample = async () => {
     const { accounts, contract } = this.state;
     console.log("accounts",accounts,"\n");
+    console.log("state:",this.state);
 
     // Stores a given value, 5 by default.
     await contract.methods.set(3).send({ from: accounts[0] });

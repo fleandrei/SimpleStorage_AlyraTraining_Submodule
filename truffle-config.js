@@ -17,11 +17,13 @@
 * phrase from a file you've .gitignored so it doesn't accidentally become public.
 *
 */
- 
+const path = require("path");
+
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-require('dotenv').config({path: '/EnvVar.env'});
- 
+console.log(require('dotenv').config({path: 'EnvVar.env'}));
+console.log("id:", process.env.INFURA_ID, ",   MP:",  process.env.MNEMONIC);
 module.exports = {
+  contracts_build_directory: path.join(__dirname, "client/src/contracts"),
  /**
   * Networks define how you connect to your ethereum client and let you set the
   * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -46,13 +48,13 @@ module.exports = {
    },
    rinkeby: {
      provider: function() {
-       return new HDWalletProvider(`${process.env.MNEMONIC}`, `https://rinkeby.infura.io/v3/${process.env.INFURA_ID}`)
+       return new HDWalletProvider(`${process.env.MNEMONIC}`, `${process.env.INFURA_ID}`);
      },
      network_id: 4
    },
    ropsten: {
      provider: function() {
-       return new HDWalletProvider(`${process.env.MNEMONIC}`, `https://ropsten.infura.io/v3/${process.env.INFURA_ID}`)
+       return new HDWalletProvider(`${process.env.MNEMONIC}`, `${process.env.INFURA_ID}`);
      },
      network_id: 3
    }
